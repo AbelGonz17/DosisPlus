@@ -21,11 +21,6 @@ function switchUser(id: string) {
   router.push({ name: 'today' })
 }
 
-function goToUsers() {
-  open.value = false
-  router.push({ name: 'profile' })
-}
-
 function logout() {
   users.logout()
   open.value = false
