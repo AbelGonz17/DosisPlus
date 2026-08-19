@@ -29,6 +29,7 @@ function goToUsers() {
 function logout() {
   users.logout()
   open.value = false
+  router.push({ name: 'login' })
 }
 </script>
 
@@ -87,16 +88,6 @@ function logout() {
           </button>
         </div>
         <div class="border-t border-slate-100 p-1.5">
-          <button
-            class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50"
-            @click="goToUsers"
-          >
-            <svg class="size-4 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
-              <path fill-rule="evenodd" d="M.664 10.59a1.651 1.651 0 0 1 0-1.186A10.004 10.004 0 0 1 2.656 6.75a.75.75 0 0 1 .764-.046 6.5 6.5 0 0 0 3.16.87.75.75 0 0 1 .5.164 7.003 7.003 0 0 1 5.84 0 .75.75 0 0 1 .5-.164 6.5 6.5 0 0 0 3.16-.87.75.75 0 0 1 .764.046 10.004 10.004 0 0 1 1.992 2.654 1.651 1.651 0 0 1 0 1.186 10.004 10.004 0 0 1-1.992 2.654.75.75 0 0 1-.764.046 6.5 6.5 0 0 0-3.16-.87.75.75 0 0 1-.5-.164 7.003 7.003 0 0 1-5.84 0 .75.75 0 0 1-.5.164 6.5 6.5 0 0 0-3.16.87.75.75 0 0 1-.764-.046A10.004 10.004 0 0 1 .664 10.59Z" clip-rule="evenodd" />
-            </svg>
-            Gestionar personas
-          </button>
           <button
             class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-rose-600 transition-colors hover:bg-rose-50"
             @click="logout"
